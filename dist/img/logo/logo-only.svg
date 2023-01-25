@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   id="svg5"
+   version="1.1"
+   viewBox="0 0 473.02139 510.88947"
+   height="510.88947"
+   width="473.02139"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="translate(-293.00986,-298.03729)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:483.538px;line-height:1.25;font-family:'Train One';-inkscape-font-specification:'Train One, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20884"
+       x="445.37924"
+       y="774.00879"
+       id="text988"><tspan
+         id="tspan986"
+         x="445.37924"
+         y="774.00879"
+         style="stroke-width:1.20884">Y</tspan></text>
+    <g
+       id="g1268"
+       transform="matrix(1.208845,0,0,1.208845,-105.99495,-107.42655)">
+      <g
+         aria-label="i"
+         transform="rotate(-27.318244)"
+         id="text988-5"
+         style="font-size:400px;line-height:1.25;font-family:'Train One';-inkscape-font-specification:'Train One, Normal';letter-spacing:0px;word-spacing:0px">
+        <path
+           d="m 107.00192,582.416 h 19.2 v 222.8 h -19.2 z"
+           id="path1086" />
+        <path
+           d="m 158.20192,582.416 h 19.2 v 222.8 h -19.2 z"
+           id="path1084" />
+        <path
+           d="m 107.41307,512.53826 18.32366,9.66017 0.40668,69.6952 -19.1979,-0.28438 z"
+           id="path1082" />
+        <path
+           id="path1082-0"
+           style="font-size:400px;line-height:1.25;font-family:'Train One';-inkscape-font-specification:'Train One, Normal';letter-spacing:0px;word-spacing:0px"
+           d="m 158.67695,551.68916 -0.45911,31.00287 19.19841,0.28384 0.31771,-21.44297 z" />
+      </g>
+      <rect
+         style="fill:#000000;stroke-width:0.927275"
+         id="rect1069"
+         width="18.805971"
+         height="73.208954"
+         x="463.09702"
+         y="656.52985" />
+      <rect
+         style="fill:#000000;stroke-width:1.05464"
+         id="rect1071"
+         width="18.805971"
+         height="94.701492"
+         x="508.43286"
+         y="634.02985" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:48.3538px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.20884"
+       x="321.96902"
+       y="394.52579"
+       id="text1075"
+       transform="rotate(-0.41189155)"><tspan
+         id="tspan1073"
+         x="321.96902"
+         y="394.52579"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:128.944px;font-family:'Bebas Neue';-inkscape-font-specification:'Bebas Neue, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:1.20884">ILYAS YASIN</tspan></text>
+    <rect
+       style="fill:#000000;stroke-width:1.02424"
+       id="rect1278"
+       width="24.11252"
+       height="79.800972"
+       x="293.00986"
+       y="300.18991"
+       ry="14.04392" />
+    <rect
+       style="fill:#ffffff;stroke-width:1.20884"
+       id="rect1280"
+       width="9.7598295"
+       height="32.293556"
+       x="299.75571"
+       y="339.5163"
+       ry="4.8799148" />
+    <path
+       style="fill:#000000"
+       id="path1490"
+       d="m 594.40301,536.64179 -107.15586,-130.82403 1.81447,-0.44664 166.87486,-27.38767 -0.52043,1.79468 -59.71901,158.21171 z"
+       transform="matrix(0.48500489,0.08528004,-0.07756824,0.51131528,355.56035,167.38298)" />
+    <rect
+       style="fill:#000000;stroke-width:0.981588"
+       id="rect1492"
+       width="195.11194"
+       height="22.835821"
+       x="453.27267"
+       y="786.09094"
+       ry="11.417911" />
+    <rect
+       style="fill:#f2f2f2;stroke-width:0.552887"
+       id="rect1494"
+       width="109.89828"
+       height="12.86245"
+       x="462.16"
+       y="790.84015"
+       ry="6.4312248" />
+  </g>
+</svg>

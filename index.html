@@ -8,9 +8,16 @@
     <link rel="icon" href="dist/img/logo//logo-only.svg" type="image/icon type">
     <title>ILYAS YASIN</title>
 </head>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script>
+$(function(){
+      $("#includeHeader").load("header.html");
+});
+</script>
 <body>
+    <div id="includeHeader"></div>
     <!-- Header start -->
-    <header class="bg-transparent absolute top-0 left-0 w-full flex item-cennter z-10">
+    <!-- <header class="bg-transparent absolute top-0 left-0 w-full flex item-cennter z-10">
         <div class="container">
             <div class="flex items-center justify-between relative">
                 <div class="px-4">
@@ -25,7 +32,6 @@
                         <span class="humburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
                     </button>
 
-                    <!-- class menu -->
                     <nav class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none" id="nav-menu">
                         <ul class="block lg:flex">
                             <li class="group">
@@ -48,7 +54,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
     <!-- Header End -->
     <!-- Hero Section -->
     <section id="home" class="pt-36">
@@ -84,12 +90,13 @@
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>    
-                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Yuk Belajar Programming di WUP</h2>
-                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat deleniti totam, placeat blanditiis et doloremque sit animi adipisci ipsam saepe perferendis ea. Mollitia iure repudiandae modi, quibusdam quaerat sapiente recusandae accusamus ab odio, magnam quo quia nisi perspiciatis. Corporis, illo a asperiores aut et pariatur inventore nulla incidunt! Qui sint totam eos distinctio aperiam incidunt perferendis dolorem harum voluptatibus omnis libero saepe, eum minima pariatur ad voluptates repellat. Iure ad porro officiis, veritatis quam animi minus reiciendis maiores odio, pariatur quasi quae consectetur accusantium quis provident exercitationem. Recusandae totam ducimus fugit optio dolores aliquid, ab, quod minus quos temporibus iste.</p>
+                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Sofware Developer</h2>
+                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Perkenalkan Saya Ilyas Yasin seorang programmer 
+                        di Lembaga Kebijakan Kementrian Barang/Jasa, lulusan kampus Politeknik Pos Indonnesia tahun 2018, pada tahun 2017 saya mengikuti lomba Gagasan terkait Teknologi dengan tema Hydroponics Assistant dan saya menjadi anggota dari Tim Hydroponics Assistant Berbasis IOT yang dikembangkan di Universitas Padjajaran sebagai studi kasus salah satunya hydroponics selada dan Kapcoy</p>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
                     <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Mari berteman</h3>
-                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate molestias iusto enim voluptates quod eos ducimus laborum vitae eius nostrum suscipit nisi odit harum modi non perspiciatis, nam iure. Excepturi iure natus similique perspiciatis officiis cupiditate recusandae quidem, eius totam accusamus, rerum minus accusantium. Doloribus esse cupiditate voluptatum, rerum id, veniam, magni nisi sint numquam error commodi explicabo dolores eaque maiores? Saepe minus blanditiis doloremque dolor ut aliquid esse iste atque dignissimos porro voluptatem, adipisci doloribus optio. Quis nobis voluptates magnam. Tempore voluptatibus commodi reiciendis voluptate facere veniam fuga iure, ullam vero facilis corporis exercitationem culpa quo alias molestias.</p>
+                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Kalian Bisa cek Profile saya di social media dibawah ini </p>
                     <div class="flex items-center">
                         <!-- youtube -->
                         <a href="#" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white text-slate-300">
@@ -113,6 +120,62 @@
         </div>
     </section>
     <!-- About Section End -->
+
+    <section id="id" class="pt-36 pb-32 bg-slate-700">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="overflow-hidden bg-white shadow md:rounded-sm sm:rounded-lg lg:rounded-lg">
+                    <div class="px-4 py-5 sm:px-6">
+                      <h3 class="text-lg font-medium leading-6 text-gray-900">Applicant Information</h3>
+                      <p class="mt-1 max-w-2xl text-sm text-gray-500">Personal details and application.</p>
+                    </div>
+                    <div class="border-t border-gray-200">
+                      <dl>
+                        <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="text-sm font-medium text-gray-500">Full name</dt>
+                          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">ILYAS YASIN</dd>
+                        </div>
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="text-sm font-medium text-gray-500">Application for</dt>
+                          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">SOFTWARE DEVELOPER</dd>
+                        </div>
+                        <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                          <dt class="text-sm font-medium text-gray-500">Attachments</dt>
+                          <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                            <ul role="list" class="divide-y divide-gray-200 rounded-md border border-gray-200">
+                              <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+                                <div class="flex w-0 flex-1 items-center">
+                                  <!-- Heroicon name: mini/paper-clip -->
+                                  <svg class="h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                                  </svg>
+                                  <span class="ml-2 w-0 flex-1 truncate">resume_back_end_developer.pdf</span>
+                                </div>
+                                <div class="ml-4 flex-shrink-0">
+                                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                                </div>
+                              </li>
+                              <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+                                <div class="flex w-0 flex-1 items-center">
+                                  <!-- Heroicon name: mini/paper-clip -->
+                                  <svg class="h-5 w-5 flex-shrink-0 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                                  </svg>
+                                  <span class="ml-2 w-0 flex-1 truncate">coverletter_back_end_developer.pdf</span>
+                                </div>
+                                <div class="ml-4 flex-shrink-0">
+                                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Download</a>
+                                </div>
+                              </li>
+                            </ul>
+                          </dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+            </div>
+        </div>          
+    </section>
 
     <!-- Portopolio Section Start -->
     <section id="portopolio" class="pt-36 pb-16 bg-slate-100">
@@ -146,26 +209,9 @@
                         </h3>
                         <p class="font-medium text-base text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi autem, ipsum vitae, quod rerum, non nemo molestias cum illo magni necessitatibus officia impedit corporis explicabo harum deserunt quis qui commodi.</p>
                     </div>
-
-                    <div class="mb-12 p-4 md:w-1/2">
-                        <div class="rounded-md shoadow-md overflow-hidden">
-                            <img src="dist/img/portopolio/Screenshot 2023-01-22 at 20-22-36 Forum.png" alt="Landing Page" class="w-full">
-                        </div>
-                        <h3 class="font-semibold text-xl text-dark mt-3 mb-3">
-                            Landing Page Ilyas Yasin
-                        </h3>
-                        <p class="font-medium text-base text-secondary">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi autem, ipsum vitae, quod rerum, non nemo molestias cum illo magni necessitatibus officia impedit corporis explicabo harum deserunt quis qui commodi.</p>
-                    </div>
-
-                    <div class="mb-12 p-4 md:w-1/2">
-                        <div class="rounded-md shoadow-md overflow-hidden">
-                            <img src="dist/img/portopolio/Screenshot 2023-01-22 at 20-23-01 Forum.png" alt="Landing Page" class="w-full">
-                        </div>
-                        <h3 class="font-semibold text-xl text-dark mt-3 mb-3">
-                            Landing Page Ilyas Yasin
-                        </h3>
-                        <p class="font-medium text-base text-secondary md:text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi autem, ipsum vitae, quod rerum, non nemo molestias cum illo magni necessitatibus officia impedit corporis explicabo harum deserunt quis qui commodi.</p>
-                    </div>
+                </div>
+                <div class="mx-auto text-center mb-16">
+                    <a href="/projek.html" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Lihat Lebih Banyak</a>
                 </div>
             </div>
         </div>

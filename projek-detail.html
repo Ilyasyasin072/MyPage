@@ -21,7 +21,7 @@
 
             function readJson (id) {
                // http://localhost:8080
-               fetch('/data/portopolio.json')
+               fetch('data/portopolio.json')
                .then(response => {
                   if (!response.ok) {
                      throw new Error("HTTP error " + response.status);
@@ -63,7 +63,6 @@
          <div id="projek-detail" class="container mx-auto space-y-2 lg:space-y-0 lg:gap-2 lg:grid lg:grid-cols-3 bg-slate-600">
         </div>
       </section>
-      <!-- <!-- About Section End  -->
       <script src="dist/js/script.js"></script>
    </body>
 </html>

@@ -1,107 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="dist/output.css" rel="stylesheet">
-      <link rel="icon" href="dist/img/logo//logo-only.svg" type="image/icon type">
-      <title>ILYAS YASIN</title>
-   </head>
-   <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-   <script>
-      $(function(){
-            $("#includeHeader").load("header.html");
-      });
-   </script>
-   <body>
-      <!-- Header start -->
-      <div id="includeHeader"></div>
-      <section id="projek" class="pt-36 pb-32">
-         <div class="container px-10 py-8 mx-auto items-center">
-            <h3 class="p-4 text-xl text-semibold">Image Gallery Basic 1</h3>
-            <div class="flex flex-wrap">
-               <div class="lg:w-1/3 sm:w-1/2 p-2 ">
-                  <div class="flex flex-wrap relative">
-                     <img
-                        src="dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
-                        alt="Photo by Claudio Schwarz on Unsplash"
-                        class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100">
-                     <h4 class="font-semibold mt-2">Projek First</h4>
-                     <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsum id facilis dolor laudantium fuga ipsam corporis recusandae! Architecto, animi?</p>
-                     <div class="text-center mb-10 mt-10">
-                        <a href="projek-detail.html?id=projek-first" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
-                     </div>
-                  </div>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="dist/output.css" rel="stylesheet">
+   <link rel="icon" href="dist/img/logo//logo-only.svg" type="image/icon type">
+   <title>ILYAS YASIN</title>
+</head>
+<style>
+   .morecontent span {
+      display: none;
+   }
+   .morelink {
+      display: block;
+   }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<script>
+   $(function(){
+      $("#includeHeader").load("header.html");
+      $(document).ready(function(){
+         skeletonDetail();
+         $('.skeleton-projek').show();
+         $('.projek').hide();
+         setTimeout(()=>{
+            $('.skeleton-projek').hide();
+            $('.projek').show();
+         }, 500)
+         function skeletonDetail() {
+            $('.skeleton-projek').empty();
+            var skeleton = "<div class='lg:w-1/3 sm:w-1/2 p-2 '>\n" +
+                    "                  <div role='status' class='space-y-8 animate-pulse mb-10'>\n" +
+                    "               <div class='flex items-center justify-center w-full h-48 bg-gray-300 rounded sm:w-96 dark:bg-gray-700'>\n" +
+                    "                  <svg class='w-12 h-12 text-gray-200' xmlns='http://www.w3.org/2000/svg' aria-hidden='true' fill='currentColor' viewBox='0 0 640 512'><path d='M480 80C480 35.82 515.8 0 560 0C604.2 0 640 35.82 640 80C640 124.2 604.2 160 560 160C515.8 160 480 124.2 480 80zM0 456.1C0 445.6 2.964 435.3 8.551 426.4L225.3 81.01C231.9 70.42 243.5 64 256 64C268.5 64 280.1 70.42 286.8 81.01L412.7 281.7L460.9 202.7C464.1 196.1 472.2 192 480 192C487.8 192 495 196.1 499.1 202.7L631.1 419.1C636.9 428.6 640 439.7 640 450.9C640 484.6 612.6 512 578.9 512H55.91C25.03 512 .0006 486.1 .0006 456.1L0 456.1z'/></svg>\n" +
+                    "               </div>\n" +
+                    "               <h4 class='font-semibold mt-2'>\n" +
+                    "                  <div class='h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48'></div>\n" +
+                    "               </h4>\n" +
+                    "\n" +
+                    "               <div role='status' class='space-y-2.5 animate-pulse max-w-lg mb-10'>\n" +
+                    "                  <div class='flex items-center w-full space-x-2'>\n" +
+                    "                     <div class='h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full'></div>\n" +
+                    "                  </div>\n" +
+                    "                  <div class='flex items-center w-full space-x-2 max-w-[480px]'>\n" +
+                    "                     <div class='h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-full'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24'></div>\n" +
+                    "                  </div>\n" +
+                    "                  <div class='flex items-center w-full space-x-2 max-w-[400px]'>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-80'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full'></div>\n" +
+                    "                  </div>\n" +
+                    "                  <div class='flex items-center w-full space-x-2 max-w-[480px]'>\n" +
+                    "                     <div class='h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-full'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24'></div>\n" +
+                    "                  </div>\n" +
+                    "                  <div class='flex items-center w-full space-x-2 max-w-[440px]'>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-32'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-24'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-full'></div>\n" +
+                    "                  </div>\n" +
+                    "                  <div class='flex items-center w-full space-x-2 max-w-[360px]'>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-80'></div>\n" +
+                    "                     <div class='h-2.5 bg-gray-300 rounded-full dark:bg-gray-600 w-full'></div>\n" +
+                    "                  </div>\n" +
+                    "               </div>\n" +
+                    "               <div class='w-20 h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 mr-3'></div>\n" +
+                    "            </div>\n" +
+                    "               </div>";
+            for (let i = 1; i <= 3; i++) {
+               skeleton += skeleton;
+            }
+            $('.skeleton-projek').html(skeleton);
+         }
+      })
+   });
+</script>
+<body>
+<!-- Header start -->
+<div id="includeHeader"></div>
+<section id="projek" class="pt-32">
+   <div class="container px-10 py-8 mx-auto items-center">
+      <nav class="flex p-4" aria-label="Breadcrumb">
+         <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+               <a href="#" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-slate-600">
+                  <svg aria-hidden="true" class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
+                  Home
+               </a>
+            </li>
+            <li>
+               <div class="flex items-center">
+                  <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                  <a href="#" class="ml-1 text-sm font-medium text-gray-700 hover:text-slate md:ml-2">Projects</a>
                </div>
-               <div class="lg:w-1/3 sm:w-1/2 p-2">
-                  <div class="flex flex-wrap relative">
-                     <img
-                        src="dist/img/portopolio/Screenshot 2023-01-22 at 20-23-01 Forum.png"
-                        alt="Photo by Claudio Schwarz on Unsplash"
-                        class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100">
-                     <h4 class="font-semibold mt-2">Projek First</h4>
-                     <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsum id facilis dolor laudantium fuga ipsam corporis recusandae! Architecto, animi?</p>
-                     <div class="text-left mb-10 mt-10">
-                        <button class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</button>
-                     </div>
-                  </div>
+            </li>
+            <li aria-current="page">
+               <div class="flex items-center">
+                  <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                  <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">List Projek</span>
                </div>
-               <div class="lg:w-1/3 sm:w-1/2 p-2">
-                  <div class="flex flex-wrap relative">
-                     <img
-                        src="dist/img/portopolio/Screenshot 2023-01-22 at 20-20-29 Forum.png"
-                        alt="Photo by Claudio Schwarz on Unsplash"
-                        class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100 ">
-                     <h4 class="font-semibold mt-2">Projek First</h4>
-                     <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsum id facilis dolor laudantium fuga ipsam corporis recusandae! Architecto, animi?</p>
-                     <div class="text-left mb-10 mt-10">
-                        <button class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</button>
+            </li>
+         </ol>
+      </nav>
+
+      <h3 class="p-4 text-xl text-semibold">List Projek</h3>
+      <div class="flex flex-wrap skeleton-projek">
+      </div>
+      <div class="flex flex-wrap h-8projek">
+         <div class="lg:w-1/3 sm:w-1/2 p-2 ">
+            <div class="flex flex-wrap relative">
+               <img
+                       src="dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
+                       alt="Photo by Claudio Schwarz on Unsplash"
+                       class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100">
+               <h4 class="font-semibold text-justify mt-5 mb-5">( FRONTEND ) APLIKASI HAPPY FORUM</h4>
+               <p class="text-secondary text-justify more">Aplikasi Happy Forum merupakan aplikasi forum untuk semua kalangan terdiri dari beberapa fitur menambahkan posting, fitur diskusi/commentar, fitur mendengarkan musik, fitur melihat video </p>
+               <h2 class="mb-2 text-lg font-semibold text-slate-900 mt-5">Build Aplikasi :</h2>
+               <ul class="max-w-md space-y-1 text-slate-500 list-inside">
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Framework Vue Js
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Vuetify
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Vuex
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Axios
+                  </li>
+                  <li class="flex items-center">
+                     At least one special character, e.g., ! @ # ?
+                  </li>
+               </ul>
+
+               <div class="text-center mb-5 mt-5">
+                  <div class="flex items-center mb-5 space-x-4">
+                     <!-- github -->
+                     <a href="https://github.com/Ilyasyasin072/forum-apps-admin" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-blue-800 hover:text-white text-slate-300">
+                        <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                     </a>
+                     <div class="font-medium text-base">
+                        <div>Ilyasyasin072/forum-apps-admin</div>
                      </div>
                   </div>
-               </div>
-               <div class="lg:w-1/3 sm:w-1/2 p-2">
-                  <div class="flex flex-wrap relative">
-                     <img
-                        src="dist/img/portopolio/Screenshot 2023-01-22 at 20-20-29 Forum.png"
-                        alt="Photo by Claudio Schwarz on Unsplash"
-                        class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100 ">
-                     <h4 class="font-semibold mt-2">Projek First</h4>
-                     <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsum id facilis dolor laudantium fuga ipsam corporis recusandae! Architecto, animi?</p>
-                     <div class="text-left mb-10 mt-10">
-                        <button class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="lg:w-1/3 sm:w-1/2 p-2">
-                  <div class="flex flex-wrap relative">
-                     <img
-                        src="dist/img/portopolio/Screenshot 2023-01-22 at 20-20-29 Forum.png"
-                        alt="Photo by Claudio Schwarz on Unsplash"
-                        class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100 ">
-                     <h4 class="font-semibold mt-2">Projek First</h4>
-                     <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsum id facilis dolor laudantium fuga ipsam corporis recusandae! Architecto, animi?</p>
-                     <div class="text-left mb-10 mt-10">
-                        <button class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</button>
-                     </div>
-                  </div>
-               </div>
-               <div class="lg:w-1/3 sm:w-1/2 p-2">
-                  <div class="flex flex-wrap relative">
-                     <img
-                        src="dist/img/portopolio/Screenshot 2023-01-22 at 20-20-29 Forum.png"
-                        alt="Photo by Claudio Schwarz on Unsplash"
-                        class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100 ">
-                     <h4 class="font-semibold mt-2">Projek First</h4>
-                     <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsum id facilis dolor laudantium fuga ipsam corporis recusandae! Architecto, animi?</p>
-                     <div class="text-left mb-10 mt-10">
-                        <button class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</button>
-                     </div>
-                  </div>
+                  <a href="projek-detail.html?id=projek-first" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
                </div>
             </div>
          </div>
-      </section>
-      <script src="dist/js/script.js"></script>
-   </body>
+         <div class="lg:w-1/3 sm:w-1/2 p-2 ">
+            <div class="flex flex-wrap relative">
+               <img src="dist/img/portopolio/happy-forum-admin/Screenshot%202023-01-22%20at%2020-50-17%20ADMIN%20-%20admin-forum.png"
+                    alt="Happy Forum Admin"
+                    class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100">
+               <h4 class="font-semibold text-justify mt-5 mb-5">( ADMIN ) APLIKASI HAPPY FORUM</h4>
+               <p class="text-secondary text-justify more">Aplikasi Happy Forum Admin merupakan aplikasi forum untuk sebagai admin untuk mengelola data diantaranya mengelola data user, mengelola data kategori, monitoring dashboard berdasarkan kategori.</p>
+               <h2 class="mb-2 text-lg font-semibold text-slate-900 mt-5">Build Aplikasi :</h2>
+               <ul class="max-w-md space-y-1 text-slate-500 list-inside">
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Framework Nuxt Js
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Vuetify
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Vuex
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Vue Router
+                  </li>
+                  <li class="flex items-center">
+                     At least one special character, e.g., ! @ # ?
+                  </li>
+               </ul>
+               <div class="text-center mb-5 mt-5">
+                  <div class="flex items-center mb-5 space-x-4">
+                     <!-- github -->
+                     <a href="https://github.com/Ilyasyasin072/forum-apps" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-blue-800 hover:text-white text-slate-300">
+                        <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                     </a>
+                     <div class="font-medium text-base">
+                        <div>Ilyasyasin072/forum-apps</div>
+                     </div>
+                  </div>
+                  <a href="projek-detail.html?id=projek-first" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
+               </div>
+            </div>
+         </div>
+         <div class="lg:w-1/3 sm:w-1/2 p-2 ">
+            <div class="flex flex-wrap relative">
+               <img src="dist/img/portopolio/apps-regresi-linier/Picture1.jpg"
+                    alt="Happy Forum Admin"
+                    class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100">
+               <h4 class="font-semibold text-justify mt-5">PERAMALAN HABIS PUPUK HYDROPONICS ASSISTANT</h4>
+               <p class="text-secondary text-justify more">tanaman hidroponik diberikan dosis 3ml dan 30liter air den- gan pH 8.5 pada skala kecil. Akan tetapi Bagaimana jika penerapan pada hidroponik dengan skala besar dengan air cukup banyak dapat menentukan dosis dan jumlah larutan nurtisi PPM pada hidroponik, memprediksi kapan jumlah pupuk pada nurtisi habis dan juga bagaimana memprediksi hubungan antara dosis dan jumlah yang ditentukan yaitu dengan menggunakan metode peramalan, Peramalan adalah penggunaan data masa lalu dari sebuah variabel atau kumpulan varabel untuk mengestimasi nilainya di masa yang akan dating</p>
+               <h2 class="mb-2 text-lg font-semibold text-slate-900 mt-5">Build Aplikasi :</h2>
+               <ul class="max-w-md space-y-1 text-slate-500 list-inside">
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Framework Laravel 5.6
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Mysql
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Boostrap
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Jquery
+                  </li>
+                  <li class="flex items-center">
+                     At least one special character, e.g., ! @ # ?
+                  </li>
+               </ul>
+               <div class="text-center mb-5 mt-5">
+                  <div class="flex items-center mb-5 space-x-4">
+                     <!-- github -->
+                     <a href="https://github.com/Ilyasyasin072/Internship2" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-blue-800 hover:text-white text-slate-300">
+                        <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                     </a>
+                     <div class="font-medium text-base">
+                        <div>Ilyasyasin072/Internship2</div>
+                     </div>
+                  </div>
+                  <a href="projek-detail.html?id=projek-first" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
+               </div>
+            </div>
+         </div>
+         <div class="lg:w-1/3 sm:w-1/2 p-2 ">
+            <div class="flex flex-wrap relative">
+               <img src="dist/img/portopolio/arduino-turbidity-fuzzy/1.jpeg"
+                    alt="Happy Forum Admin"
+                    class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100">
+               <h4 class="font-semibold text-justify mt-5">Implementation Fuzzy Logic Water Quality Prediction on Hydroponics Assistant Based IOT </h4>
+               <p class="text-secondary text-justify more">Aplikasi untuk memprediksi mengukur kekeruhan pada air nutrisi hidroponik dengan menggunakan arduino dan juga sensor turbidty dan untuk database nya menggunakan firebase dan android sebagai informasi notifikasi </p>
+               <h2 class="mb-2 text-lg font-semibold text-slate-900 mt-5">Build Aplikasi :</h2>
+               <ul class="max-w-md space-y-1 text-slate-500 list-inside">
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Arduino
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Sensor : Turbidity, Module Wifi
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Firebase ( Database )
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Vue js ( Monitoring )
+                  </li>
+                  <li class="flex items-center">
+                     At least one special character, e.g., ! @ # ?
+                  </li>
+               </ul>
+               <div class="text-center mb-5 mt-5">
+                  <div class="flex items-center mb-5 space-x-4">
+                     <!-- github -->
+                     <a href="https://github.com/Ilyasyasin072/Tugas-Akhir" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-blue-800 hover:text-white text-slate-300">
+                        <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                     </a>
+                     <div class="font-medium text-base">
+                        <div>Ilyasyasin072/Tugas-Akhir</div>
+                     </div>
+                  </div>
+                  <a href="projek-detail.html?id=projek-first" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
+               </div>
+            </div>
+         </div>
+         <div class="block lg:w-1/3 sm:w-1/2 p-2 ">
+            <div class="flex flex-wrap relative">
+               <img src="dist/img/portopolio/rekrutmen/1.png"
+                    alt="Happy Forum Admin"
+                    class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100">
+               <h4 class="font-semibold text-justify mt-5">( FRONTEND ) Rekrutmen Pegawai PT Shafira Corporation</h4>
+               <p class="text-secondary text-justify more">Aplikasi rekrutmen untuk mempermudah perekrutan pegawai di PT Shafira Corporation dengan adanya module untuk melihat hasil psikotes.</p>
+               <h2 class="mb-2 text-lg font-semibold text-slate-900 mt-5">Build Aplikasi :</h2>
+               <ul class="max-w-md space-y-1 text-slate-500 list-inside">
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Framework Laravel
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Boostrap
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Mysql
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Frontend
+                  </li>
+                  <li class="flex items-center">
+                     At least one special character, e.g., ! @ # ?
+                  </li>
+               </ul>
+
+               <div class="text-center mb-5 mt-5">
+                  <div class="flex items-center mb-5 space-x-4">
+                     <!-- github -->
+                     <a href="https://github.com/Ilyasyasin072/Simple-Project-Rekrutmen-Laravel-Frontend" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-blue-800 hover:text-white text-slate-300">
+                        <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                     </a>
+                     <div class="font-medium text-base">
+                        <div>Ilyasyasin072/Simple-Project-Rekrutmen</div>
+                     </div>
+                  </div>
+                  <a href="projek-detail.html?id=projek-first" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
+               </div>
+            </div>
+         </div>
+         <div class="block lg:w-1/3 sm:w-1/2 p-2 ">
+            <div class="flex flex-wrap relative">
+               <img src="dist/img/portopolio/rekrutmen/admin/2%20(1).png"
+                    alt="Happy Forum Admin"
+                    class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100">
+               <h4 class="font-semibold text-justify mt-5">( ADMIN ) Rekrutmen Pegawai PT Shafira Corporation</h4>
+               <p class="text-secondary text-justify more">Aplikasi rekrutmen untuk mempermudah perekrutan pegawai di PT Shafira Corporation dan melakukan approval terkait adannya psikotes dan hasil perekrutan.</p>
+               <h2 class="mb-2 text-lg font-semibold text-slate-900 mt-5">Build Aplikasi :</h2>
+               <ul class="max-w-md space-y-1 text-slate-500 list-inside">
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Framework Laravel
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Boostrap
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Mysql
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Frontend
+                  </li>
+                  <li class="flex items-center">
+                     At least one special character, e.g., ! @ # ?
+                  </li>
+               </ul>
+
+               <div class="text-center mb-5 mt-5">
+                  <div class="flex items-center mb-5 space-x-4">
+                     <!-- github -->
+                     <a href="https://github.com/Ilyasyasin072/Simple-Project-Rekrutmen-Laravel-Frontend" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-blue-800 hover:text-white text-slate-300">
+                        <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                     </a>
+                     <div class="font-medium text-base">
+                        <div>Ilyasyasin072/Simple-Project-Rekrutmen</div>
+                     </div>
+                  </div>
+                  <a href="projek-detail.html?id=projek-first" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
+               </div>
+            </div>
+         </div>
+         <div class="block space-x-4 lg:w-1/3 sm:w-1/2 p-2">
+            <div class="flex flex-wrap relative">
+               <img src="dist/img/portopolio/inventory-vb/Simple%20Login.png"
+                    alt="Happy Forum Admin"
+                    class="inset-0 h-48 w-96 object-cover object-center rounded-lg opacity-75 hover:opacity-100">
+               <h4 class="font-semibold text-justify mt-5">( VB ) INVENTORY VISUAL BASIC</h4>
+               <p class="text-secondary text-justify more">Aplikasi Inventory untuk pencatatan laporan keluar masuk barang menggunakan Visual bacis dan database mysql.</p>
+               <h2 class="mb-2 text-lg font-semibold text-slate-900 mt-5">Build Aplikasi :</h2>
+               <ul class="max-w-md space-y-1 text-slate-500 list-inside">
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Visual Basic
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                     Boostrap
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Mysql
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Frontend
+                  </li>
+                  <li class="flex items-center">
+                     At least one special character, e.g., ! @ # ?
+                  </li>
+               </ul>
+
+               <div class="text-center mb-5 mt-5">
+                  <div class="flex items-center mb-5 space-x-4">
+                     <!-- github -->
+                     <a href="https://github.com/Ilyasyasin072/Simple-Crud-Visual-Basic-2010" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-blue-800 hover:text-white text-slate-300">
+                        <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                     </a>
+                     <div class="font-medium text-base">
+                        <div>Ilyasyasin072/Simple-Crud-Visual-Basic-2010</div>
+                     </div>
+                  </div>
+                  <a href="projek-detail.html?id=projek-first" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
+               </div>
+            </div>
+         </div>
+         <!--   API     -->
+         <div class="block space-x-4 lg:w-1/3 sm:w-1/2 p-2">
+            <div class="flex flex-wrap relative">
+               <img src="dist/img/logo/api-interface.svg"
+                    alt="Happy Forum Admin"
+                    class="inset-0 h-48 w-96 object-center rounded-lg opacity-75 hover:opacity-100">
+               <h4 class="font-semibold text-justify mt-5">( API ) Fabric Grey</h4>
+               <p class="text-secondary text-justify more">Rest Api Fabric Grey di PT Mewah Niagajaya untuk pencatatan ukuran Fabric dan mengelola daftar fabric yang manual</p>
+               <h2 class="mb-2 text-lg font-semibold text-slate-900 mt-5">Build Aplikasi :</h2>
+               <ul class="max-w-md space-y-1 text-slate-500 list-inside">
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Laravel
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Postman
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Mysql
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     JWT
+                  </li>
+                  <li class="flex items-center">
+                     At least one special character, e.g., ! @ # ?
+                  </li>
+               </ul>
+
+               <div class="text-center mb-5 mt-5">
+                  <div class="flex items-center mb-5 space-x-4">
+                     <!-- github -->
+                     <a href="https://github.com/Ilyasyasin072/apps-fabrics-grey-server" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-blue-800 hover:text-white text-slate-300">
+                        <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                     </a>
+                     <div class="font-medium text-base">
+                        <div>Ilyasyasin072/apps-fabrics-grey-server</div>
+                     </div>
+                  </div>
+                  <a href="projek-detail.html?id=projek-first" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
+               </div>
+            </div>
+         </div>
+         <div class="block space-x-4 lg:w-1/3 sm:w-1/2 p-2">
+            <div class="flex flex-wrap relative">
+               <img src="dist/img/logo/api-interface.svg"
+                    alt="Happy Forum Admin"
+                    class="inset-0 h-48 w-96 object-center rounded-lg opacity-75 hover:opacity-100">
+               <h4 class="font-semibold text-justify mt-5">( API ) HAPPY FORUM</h4>
+               <p class="text-secondary text-justify more">Rest Api Untuk Aplikasi Happy Forum dengan menggunakan framework Laravel, database mysql, passport Auth, Cors, Middelware.</p>
+               <h2 class="mb-2 text-lg font-semibold text-slate-900 mt-5">Build Aplikasi :</h2>
+               <ul class="max-w-md space-y-1 text-slate-500 list-inside">
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Laravel 8.0
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Postman
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Mysql
+                  </li>
+                  <li class="flex items-center">
+                     <svg class="w-4 h-4 mr-1.5 text-green-500 dark:text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                     Passport
+                  </li>
+                  <li class="flex items-center">
+                     At least one special character, e.g., ! @ # ?
+                  </li>
+               </ul>
+
+               <div class="text-center mb-5 mt-5">
+                  <div class="flex items-center mb-5 space-x-4">
+                     <!-- github -->
+                     <a href="https://github.com/Ilyasyasin072/forum-apps/tree/main/api-forum" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-blue-800 hover:text-white text-slate-300">
+                        <svg role="img" class="fill-current" width="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                     </a>
+                     <div class="font-medium text-base">
+                        <div>Ilyasyasin072/forum-apps/tree/main/api-forum</div>
+                     </div>
+                  </div>
+                  <a href="projek-detail.html?id=projek-first" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<script src="dist/js/script.js"></script>
+<script>
+   $(document).ready(function () {
+      $(document).ready(function() {
+         // Configure/customize these variables.
+         var showChar = 100;  // How many characters are shown by default
+         var ellipsestext = "...";
+         var moretext = "Show more";
+         var lesstext = "Show less";
+
+
+         $('.more').each(function() {
+            var content = $(this).html();
+
+            if(content.length > showChar) {
+
+               var c = content.substr(0, showChar);
+               var h = content.substr(showChar, content.length - showChar);
+
+               var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<button type="button" class="morelink mt-2 mb-2 text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 bg-blue-700 text-xs">\n' + moretext + '</button></span>';
+
+               $(this).html(html);
+            }
+
+         });
+
+         $(".morelink").click(function(){
+            if($(this).hasClass("less")) {
+               $(this).removeClass("less");
+               $(this).html(moretext);
+            } else {
+               $(this).addClass("less");
+               $(this).html(lesstext);
+            }
+            $(this).parent().prev().toggle();
+            $(this).prev().toggle();
+            return false;
+         });
+      });
+   });
+</script>
+</body>
 </html>

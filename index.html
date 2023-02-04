@@ -9,6 +9,7 @@
     <title>ILYAS YASIN</title>
 </head>
 <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
 <script>
 $(function(){
       $("#includeHeader").load("header.html");
@@ -16,6 +17,7 @@ $(function(){
 </script>
 <body>
     <div id="includeHeader"></div>
+    <!-- referensi https://flowbite.com/docs/components/mega-menu/ -->
     <!-- Header start -->
     <!-- <header class="bg-transparent absolute top-0 left-0 w-full flex item-cennter z-10">
         <div class="container">
@@ -25,7 +27,7 @@ $(function(){
                         <img src="dist/img//logo/logo-only.png" class="h-5 w-5" width="40" height="30" alt="">
                     </a>
                 </div>
-                <div class="flex items-center px-4">
+                <div class= "flex items-center px-4">
                     <button id="humburger" name="huburger" type="buttonn" class="block absolute right-4 lg:hidden"">
                         <span class="humburger-line transition duration-300 ease-in-out  origin-top-left "></span>
                         <span class="humburger-line transition duration-300 ease-in-out"></span>
@@ -57,7 +59,7 @@ $(function(){
     </header> -->
     <!-- Header End -->
     <!-- Hero Section -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-20">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
@@ -71,10 +73,10 @@ $(function(){
                 </div>
                 <!-- Picture/Image -->
                 <div class="w-full self-end px-4 lg:w-1/2">
-                    <div class="relative mt-10 lg:mt-9 lg:right-0">
-                        <img src="dist/img//IMG_20230125_090300-removebg-preview.png" class="max-w-full mx-auto rounded-xl" alt="Ilyas Yasin">
+                    <div class="relative lg:right-0">
+                        <img src="dist/img//ilyas-yasin-removebg-preview.png" class="w-50 h-50 mx-auto rounded-xl" alt="Ilyas Yasin">
                     <span class="absolute bottom-0 -z-20 left-1/2 -translate-x-1/2">
-                        <svg width="300" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="500" height="500" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#14b8a6" d="M23.1,-20.5C38,-15,63.7,-15.4,73.9,-5.8C84.2,3.7,79.1,23.2,67.3,34.4C55.6,45.6,37.2,48.6,23.5,45.1C9.9,41.5,1,31.5,-7.2,25.9C-15.3,20.2,-22.8,18.9,-33.4,13.2C-44,7.5,-57.6,-2.5,-57.9,-11.8C-58.2,-21.1,-45.1,-29.7,-33.2,-35.6C-21.4,-41.5,-10.7,-44.9,-3.3,-41C4.1,-37.1,8.2,-25.9,23.1,-20.5Z" transform="translate(100 100)" />
                           </svg>
                     </span> 
@@ -94,7 +96,7 @@ $(function(){
                     <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Perkenalkan Saya Ilyas Yasin seorang programmer 
                         di Lembaga Kebijakan Kementrian Barang/Jasa, lulusan kampus Politeknik Pos Indonnesia tahun 2018, pada tahun 2017 saya mengikuti lomba Gagasan terkait Teknologi dengan tema Hydroponics Assistant dan saya menjadi anggota dari Tim Hydroponics Assistant Berbasis IOT yang dikembangkan di Universitas Padjajaran sebagai studi kasus salah satunya hydroponics selada dan Kapcoy</p>
                 </div>
-                <div class="w-full self-end px-4 lg:w-1/2">
+                <div class="w-full lg:w-1/2">
                     <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Mari berteman</h3>
                     <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Kalian Bisa cek Profile saya di social media dibawah ini </p>
                     <div class="flex items-center">
@@ -143,7 +145,8 @@ $(function(){
                     </div>
                   </div>
             </div>
-        </div>          
+        </div>   
+               
     </section>
 
     <!-- Portopolio Section Start -->
@@ -193,8 +196,8 @@ $(function(){
             <div class="w-full px-4">
                 <div class="mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Klient</h4>
-                    <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Yang Pernah Bekerja sama</h2>
-                    <p class="font-medium text-slate-400 text-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe beatae neque porro, voluptatem fugiat, at repudiandae magni, deleniti qui veniam laborum debitis! Laborum quam tempore hic recusandae illum ullam id?</p>
+                    <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Pernah Bekerja di Perusahaan</h2>
+
                 </div>
             </div>
             <div class="w-full px-4">
@@ -264,36 +267,59 @@ $(function(){
     </section>
     <!-- Blog Section End -->
 
-    <section id="footer" class="pt-36 pb-3 bg-slate-700">
+    <section id="footer" class="pt-36 pb-">
         <div class="container">
             <div class="w-full px-4">
-                <div class="mx-auto text-center mb-16">
-                    <h4 class="font-semibold text-white mb-2">About</h4>
-                    <div class="flex items-center justify-center">
-                        <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500">
-                            <img src="/dist//img//client/Logo_LKPP.png" class="w-full" alt="">
-                        </a>
-                        <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500">
-                            <img src="/dist//img//client/download.png" class="w-full" alt="">
-                        </a>
-                        <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500">
-                            <img src="/dist//img//client/Logo_LKPP.png" class="w-full" alt="">
-                        </a>
-                        <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500">
-                            <img src="/dist//img//client/download.png" class="w-full" alt="">
-                        </a>
-                        <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500">
-                            <img src="/dist//img//client/Logo_LKPP.png" class="w-full" alt="">
-                        </a>
-                        <a href="#" class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100 duration-500">
-                            <img src="/dist//img//client/download.png" class="w-full" alt="">
-                        </a>
-                    </div>
+                <div class="mx-auto text-center mb-16">          
+                <!-- <footer class="p-4 bg-white rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800">
+                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Ilyas Yasin™</a>
+                    </span>
+                    <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+                        <li>
+                            <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline">Contact</a>
+                        </li>
+                    </ul>
+                </footer> -->
+
+                    <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8">
+                        <div class="sm:flex sm:items-center sm:justify-between">
+                            <a href="#" class="flex items-center mb-4 sm:mb-0">
+                                <img src="/dist//img/logo/logo-only.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+                                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark">ILYAS-YASIN</span>
+                            </a>
+                            <ul class="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
+                                <li>
+                                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="mr-4 hover:underline md:mr-6 ">Licensing</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 3 <a href="#" class="hover:underline">ILYAS-YASIN</a>. All Rights Reserved.
+                        </span>
+                    </footer>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="dist/js/script.js"></script>
 </body>
 </html>

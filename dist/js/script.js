@@ -1,8 +1,8 @@
 // navbar fixed 
 
 window.onscroll = function() {
-    const header = document.querySelector('header');
-    const fixedNav = header.offsetTop;
+    var header = document.querySelector('header');
+    var fixedNav = header.offsetTop;
 
     if(window.pageYOffset > fixedNav) {
         header.classList.add('navbar-fixed');
@@ -14,8 +14,8 @@ window.onscroll = function() {
 }
 
 // untuk bagian humberger
-const humberger = document.querySelector('#humburger');
-const navMenu = document.querySelector('#nav-menu');
+var humberger = document.querySelector('#humburger');
+var navMenu = document.querySelector('#nav-menu');
 
 humberger.addEventListener('click', function() {
     humberger.classList.toggle('humburger-active');

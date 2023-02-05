@@ -59,17 +59,17 @@
             {
                 "id": "PJ01",
                 "name": "Nuxt JS",
-                "desc" : "loremsum loremsum loremsum "
+                "desc" : "Aplikasi ini dibuat dengan menggunakan Framework Nuxt Js"
             },
             {
                 "id": "PJ02",
                 "name" : "Vuex",
-                "desc" : "loremsum loremsum loremsum "
+                "desc" : "Aplikasi ini menerapkan plugin Vuex"
             },
             {
                 "id": "PJ02",
                 "name" : "Vuetify",
-                "desc" : "loremsum loremsum loremsum "
+                "desc" : "Aplikasi ini menggunakan Vuetify untuk boostrap tampilan"
             }
         ],
         "image" : [
@@ -97,6 +97,69 @@
     },
     {
         "id" : "003",
+        "name": "HYDROPONICS-ASSISTANT",
+        "name_projek" : "PERAMALAN HABIS PUPUK HYDROPONICS ASSISTANT",
+        "desc_projek" : " penggunaan data masa lalu dari sebuah variabel atau kumpulan varabel untuk mengestimasi nilainya di masa yang akan datang.",
+        "url_github"  : "https://github.com/Ilyasyasin072/Internship2",
+        "build_projek": [
+            {
+                "id": "PJ01",
+                "name": "Framework Laravel 5.6",
+                "desc" : "Aplikasi ini dibuat dengan menggunakan Framework Laravel"
+            },
+            {
+                "id": "PJ02",
+                "name" : "Mysql",
+                "desc" : "Aplikasi ini menggunakan Mysql Database"
+            },
+            {
+                "id": "PJ02",
+                "name" : "Boostrap",
+                "desc" : "Aplikasi ini menggunakan Boostrap untuk tampilan"
+            },
+            {
+                "id": "PJ02",
+                "name" : "Regresi Linier",
+                "desc" : "Aplikasi ini menggunakan Metode Peralaman regresi linier"
+            }
+        ],
+        "image" : [
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/apps-regresi-linier/Picture1.jpg"
+            },
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/apps-regresi-linier/Picture2.png"
+            },
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/apps-regresi-linier/Picture3.png"
+            },
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/apps-regresi-linier/Picture4.png"
+            },
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/apps-regresi-linier/Picture5.png"
+            },
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/apps-regresi-linier/Picture6.png"
+            },
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/apps-regresi-linier/Picture7.png"
+            },
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/apps-regresi-linier/Picture8.png"
+            }
+        ]
+    },
+    {
+        "id" : "004",
         "name": "Implementation-Fuzzy-logic-iot",
         "name_projek" : "Implementation Fuzzy Logic Water Quality Prediction on Hydroponics Assistant Based IOT",
         "desc_projek" : "Aplikasi untuk memprediksi mengukur kekeruhan pada air nutrisi hidroponik dengan menggunakan arduino dan juga sensor turbidty dan untuk database nya menggunakan firebase dan android sebagai informasi notifikasi",
@@ -116,16 +179,6 @@
                 "id": "PJ02",
                 "name" : "Laravel",
                 "desc" : "Backend Api untuk Menambahkan data dari Arduino ke Database Firebase"
-            },
-            {
-                "id": "PJ02",
-                "name" : "Firebase",
-                "desc" : "Database penyimpanan data secara realtime"
-            },
-            {
-                "id": "PJ02",
-                "name" : "Vue js",
-                "desc" : "Frontend Monitoring Chart Kekeruhan menggunakan alat Turbidity"
             }
         ],
         "image" : [

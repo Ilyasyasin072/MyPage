@@ -241,7 +241,7 @@
                         <div>Ilyasyasin072/Internship2</div>
                      </div>
                   </div>
-                  <a href="projek-detail.html?id=Forum-Application-admin" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
+                  <a href="projek-detail.html?id=HYDROPONICS-ASSISTANT" class="text-base font-semibold text-white bg-primary py-1 px-10 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">See More</a>
                </div>
             </div>
          </div>
@@ -514,8 +514,17 @@
 </section>
 <script src="dist/js/script.js"></script>
 <script>
-   $(document).ready(function () {
       $(document).ready(function() {
+         var url = window.location.href;
+         function UrlExists(url) {
+            var http = new XMLHttpRequest();
+            http.open('HEAD', url, false);
+            http.send();
+            if (http.status != 404)
+               return true;
+            else
+               return false;
+         }
          // Configure/customize these variables.
          var showChar = 100;  // How many characters are shown by default
          var ellipsestext = "...";
@@ -551,7 +560,6 @@
             return false;
          });
       });
-   });
 </script>
 </body>
 </html>

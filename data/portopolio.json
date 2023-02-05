@@ -1,9 +1,27 @@
 [
     {
         "id" : "001",
+        "name": "Forum-Application",
         "name_projek" : "Forum Application",
-        "desc_projek" : "lorem",
-        "url_github"  : "github_url",
+        "desc_projek" : "Aplikasi Happy Forum merupakan aplikasi forum untuk semua kalangan terdiri dari beberapa fitur menambahkan posting, fitur diskusi/commentar, fitur mendengarkan musik, fitur melihat video ",
+        "url_github"  : "https://github.com/Ilyasyasin072/forum-apps-admin",
+        "build_projek": [
+            {
+                "id": "PJ01",
+                "name": "Vue js",
+                "desc" : "loremsum loremsum loremsum "
+            },
+            {
+                "id": "PJ02",
+                "name" : "Vuex",
+                "desc" : "loremsum loremsum loremsum "
+            },
+            {
+                "id": "PJ02",
+                "name" : "Vue Router",
+                "desc" : "loremsum loremsum loremsum "
+            }
+        ],
         "image" : [
             {
                 "id" : "IMG001",
@@ -19,47 +37,117 @@
             },
             {
                 "id" : "IMG001",
-                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
+                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-20-29 Forum.png"
             },
             {
                 "id" : "IMG001",
-                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
+                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-20-57 Forum.png"
             },
             {
                 "id" : "IMG001",
-                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
+                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-21-36 Forum.png"
             }
         ]
     },
     {
         "id" : "002",
+        "name": "Forum-Application-admin",
         "name_projek" : "Forum Application",
-        "desc_projek" : "lorem",
+        "desc_projek" : "Aplikasi Happy Forum Admin merupakan aplikasi forum untuk sebagai admin untuk mengelola data diantaranya mengelola data user, mengelola data kategori, monitoring dashboard berdasarkan kategori.",
         "url_github"  : "github_url",
+        "build_projek": [
+            {
+                "id": "PJ01",
+                "name": "Nuxt JS",
+                "desc" : "loremsum loremsum loremsum "
+            },
+            {
+                "id": "PJ02",
+                "name" : "Vuex",
+                "desc" : "loremsum loremsum loremsum "
+            },
+            {
+                "id": "PJ02",
+                "name" : "Vuetify",
+                "desc" : "loremsum loremsum loremsum "
+            }
+        ],
         "image" : [
             {
                 "id" : "IMG001",
-                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
+                "src": "dist/img/portopolio/happy-forum-admin/Screenshot 2023-01-22 at 20-50-17 ADMIN - admin-forum.png"
             },
             {
                 "id" : "IMG001",
-                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
+                "src": "dist/img/portopolio/happy-forum-admin/Screenshot 2023-01-22 at 20-52-58 ADMIN - admin-forum.png"
             },
             {
                 "id" : "IMG001",
-                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
+                "src": "dist/img/portopolio/happy-forum-admin/Screenshot 2023-01-22 at 20-53-08 ADMIN - admin-forum.png"
             },
             {
                 "id" : "IMG001",
-                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
+                "src": "dist/img/portopolio/happy-forum-admin/Screenshot 2023-01-22 at 20-53-16 ADMIN - admin-forum.png"
             },
             {
                 "id" : "IMG001",
-                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
+                "src": "dist/img/portopolio/happy-forum-admin/Screenshot 2023-01-22 at 20-53-25 ADMIN - admin-forum.png"
+            }
+        ]
+    },
+    {
+        "id" : "003",
+        "name": "Implementation-Fuzzy-logic-iot",
+        "name_projek" : "Implementation Fuzzy Logic Water Quality Prediction on Hydroponics Assistant Based IOT",
+        "desc_projek" : "Aplikasi untuk memprediksi mengukur kekeruhan pada air nutrisi hidroponik dengan menggunakan arduino dan juga sensor turbidty dan untuk database nya menggunakan firebase dan android sebagai informasi notifikasi",
+        "url_github"  : "https://github.com/Ilyasyasin072/Tugas-Akhir",
+        "build_projek": [
+            {
+                "id": "PJ01",
+                "name": "Arduino",
+                "desc": "Arduino Uno adalah sebuah board minimum system mikrokontroller yang mana di dalamnya terdapat mikrokontroller AVR seri ATmega 328"
+            },
+            {
+                "id": "PJ02",
+                "name" : "Module Wifi Esp8266",
+                "desc": "Module Modul Relay 5v ESP8266 esp01 ESP-01 WiFi Wireless IoT"
+            },
+            {
+                "id": "PJ02",
+                "name" : "Laravel",
+                "desc" : "Backend Api untuk Menambahkan data dari Arduino ke Database Firebase"
+            },
+            {
+                "id": "PJ02",
+                "name" : "Firebase",
+                "desc" : "Database penyimpanan data secara realtime"
+            },
+            {
+                "id": "PJ02",
+                "name" : "Vue js",
+                "desc" : "Frontend Monitoring Chart Kekeruhan menggunakan alat Turbidity"
+            }
+        ],
+        "image" : [
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/arduino-turbidity-fuzzy/1.jpeg"
             },
             {
                 "id" : "IMG001",
-                "src": "dist/img/portopolio/Screenshot 2023-01-22 at 20-16-47 Forum.png"
+                "src": "dist/img/portopolio/arduino-turbidity-fuzzy/2.jpeg"
+            },
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/arduino-turbidity-fuzzy/4.jpeg"
+            },
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/arduino-turbidity-fuzzy/Prototype-design.png"
+            },
+            {
+                "id" : "IMG001",
+                "src": "dist/img/portopolio/arduino-turbidity-fuzzy/Prototype-design-1.png"
             }
         ]
     }
